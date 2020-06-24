@@ -1,0 +1,35 @@
+<%- include("./templates/header.ejs") %>
+<div class="container mt-4">
+    <h2>Add new entry</h2>
+    <% if(message.error){ %>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong><%= message.error %></strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <% } %>
+    <div class="row">
+        <div class="col-md-6">
+            <form class="mt-4 form-entry" method="POST" role="form">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Add title</label>
+                    <input type="text" name="title" class="form-control" id="title" aria-describedby="titleHelp"
+                        placeholder="Enter new title!">
+                </div>
+                <div class="mb-3">
+                    <label for="content" class="form-label">Add entry</label>
+                    <textarea name="content" class="form-control" id="content" rows="3"
+                        placeholder="Enter new entry!"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Post</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include("./templates/footer.ejs") %>

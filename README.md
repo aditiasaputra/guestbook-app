@@ -15,6 +15,6 @@
 
 ---
 
-> ### NOTE: This project is only for learning
+### NOTE: This project is only for learning
 
 ---
